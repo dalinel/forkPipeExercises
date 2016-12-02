@@ -1,0 +1,23 @@
+A
+Create two processes.
+The first waits until the second dies and returns an exit status from it.
+Hints: why terminates? when? can it terminate with different exit status?
+
+A enhanced
+The second process send the first a signal that asks it to terminate.
+H.: who is the parent (the first or the second) in your scheme? the signal is sent autonomously or upon reqest by the user? or after a while? use SIGUSRx signals.
+
+From now on, use exec() to run a child process, instead of writing the code of both parent and child in the same program.
+
+B
+Create two processes.
+The first inputs an array of integer values from standard input or a file, sends to the second via pipe; the second process sorts the array and prints results.
+H.: read data one by one, it's simpler; use a scheme similar to threads, as to say one process forks in sequence to generate processes "first" and "second", and waits for completion of both.
+
+C
+As before, but the second sends back the results to the first one who prints them.
+H.: do not use a bidirectional pipe. Use two pipes.
+
+D
+As before, but cyclically: after the print out, the first starts again (it is a simple client-server model: the first acts as user interface, the second as calculator). To end the loop, enter a special command (or a special input) that make the first process to terminate the second process (through signal) and to terminate itself.
+H.: use SIGUSRx signals.
