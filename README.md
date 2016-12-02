@@ -1,3 +1,3 @@
-# FORK PIPE EXERCISES
+# Exercises on fork and pipe
 
-This program is an assignement on the use of fork,pipe,open,read,write and file descriptors.
+This is an assignement on the use of fork,pipe,open,read,write and file descriptors.
